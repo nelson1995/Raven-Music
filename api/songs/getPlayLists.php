@@ -1,6 +1,7 @@
 <?php
     /* 
         Author:Nelson G Katale
+        Raven Music API
         Date:31/3/2019
     */
     //headers
@@ -14,12 +15,12 @@
 
     $song = new Song();
 
-    $result = $song->getPlayList();
+    $result = $song->getPlayLists();
 
     // get number of songs
     $num = mysqli_num_rows($result);
 
-    if( $num > 0) 
+    if($num > 0) 
     {   
         // $songs_arr = array();
         $songs_arr['data'] = array();
